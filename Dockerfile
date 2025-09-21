@@ -26,7 +26,7 @@ WORKDIR /app
 
 # Copia o arquivo .jar que foi gerado no estágio anterior (builder) para o nosso diretório de trabalho.
 # O nome do arquivo .jar deve corresponder ao que está definido no seu pom.xml.
-COPY --from=builder /app/target/academy-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=builder /app/target/*.jar app.jar
 
 # Expõe a porta 8080, que é a porta que sua aplicação usa, conforme a variável de ambiente 'PORT' na imagem.
 EXPOSE 8080
