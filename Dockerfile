@@ -32,4 +32,4 @@ COPY --from=builder /app/target/*.jar app.jar
 EXPOSE 8080
 
 # Comando para iniciar a aplicação quando o contêiner for executado.
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["sh", "-c", "java -Dspring.datasource.url=$APPLE_API_DB_URL -Dspring.datasource.username=$APPLE_API_DB_USERNAME -Dspring.datasource.password=$APPLE_API_DB_PASSWORD -jar app.jar"]
