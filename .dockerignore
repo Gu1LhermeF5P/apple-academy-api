@@ -1,0 +1,23 @@
+# Ignora a pasta de build do Maven
+/target/
+
+# Ignora arquivos de log
+*.log
+
+# Ignora arquivos e pastas do Git
+.git
+.gitignore
+
+# Ignora arquivos de configuração de IDEs
+.idea/
+.vscode/
+*.iml
+
+# Ignora os próprios arquivos do Docker
+Dockerfile
+.dockerignore
+
+# Ignora os scripts do Maven Wrapper (usaremos o Maven da imagem base)
+mvnw
+mvnw.cmd
+.mvn/
